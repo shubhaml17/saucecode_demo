@@ -20,7 +20,7 @@ def test_login(browser, username, password, expected_url, expected_element):
             assert login_page.is_app_logo_displayed()
         elif expected_element == LoginPageLocators.ERROR_MESSAGE:
             error_message = login_page.get_error_message()
-            assert "False Statement" in error_message
+            assert "Epic sadface: Sorry, this user has been locked out." in error_message
 
     except AssertionError as e:
         screenshot_path = f"C:\\Users\\DELL\\PycharmProjects\\demoProject\\screenshot\\screenshot_{username}.png"
